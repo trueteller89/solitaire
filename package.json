@@ -4,7 +4,8 @@
   "description": "multiusers card game",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "express": "^4.16.2",
     "hbs": "^4.0.1",
     "mocha": "^4.1.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }

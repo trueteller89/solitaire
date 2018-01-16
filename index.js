@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/fake', (req, res) => {
+  res.send('fake route tested')
+});
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
@@ -37,3 +41,5 @@ app.get('*', function(req, res){
 app.listen(3000, () => {
   console.log('Server is up on port 3000');
 });
+
+module.exports.app = app;
