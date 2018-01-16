@@ -21,6 +21,19 @@ app.get('/fake', (req, res) => {
   res.send('fake route tested')
 });
 
+app.get('/topplayers', (req, res) => {
+  res.send([{
+    name:'Ivan S',
+    points: 100
+  },   {
+    name:'Jake M',
+    points:20
+  }, {
+    name:'Megan R', 
+    points:50
+  }])
+});
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
